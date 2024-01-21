@@ -44,8 +44,8 @@ connection {
     inline = [
       "sudo apt update", 
       "sudo apt install mc -y",
-      "sudo apt install tomcat9 -y"
-      "sudo apt install docker.io -y"
+      "sudo apt install tomcat9 -y",
+      "sudo apt install docker.io -y",
 
     ]
   }
