@@ -14,8 +14,8 @@ provider "yandex" {
   folder_id = "b1g7eg0ncndrirrrbobi"
   zone = "ru-central1-a"
 }
-resource "yandex_compute_instance" "vm-1" {
-  name = "myvm1"
+resource "yandex_compute_instance" "default" {
+  name = "new1"
   allow_stopping_for_update = true
   resources {
     cores  = 2
