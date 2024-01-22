@@ -7,7 +7,8 @@ users:
   - name: keglia
     groups: sudo
     shell: /bin/bash
-    sudo: 'ALL=(ALL) NOPASSWD:ALL'
+    sudo: ALL=(ALL) NOPASSWD:ALL
     ssh-authorized-keys:
-      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOUoWCjArsGVdy2LtLULp/Fcp2mwl15vtcE1guQzeIqT xp@LAPTOP-08A5M294
+    - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDKUCY6BAa18zEXs1ABejtMxoz1TElSmGbYiUJg4qyjT+ZI451Wom0WvZ9vQgJXi/AHw379W/bUdAgehhcwuWHqJdWZvD8LQsCuZ3NOuvgE5PDEA9ZDCcem1y8gJ3wxuiSd+YfxVfjBIYdDPyiDqPbY1bF3aMrr4ISecUJK2fkoOeX5TV5oSoSGyqUggBlI5F4eYwNBEYLXGVWY3iIxeE1Z1qhiuVp26ztBoreJn3kmm1utvE6yJrglzx5R9j3MEDFg6Khp/lhTOVvU2elclmdB/GBea8uUOEXqN4t91VLgYQSKWKdfJcBpJ6lWsxk7q8GMVL+G2DSpuBlsDOJN5cpybrSlllxsDr396wL9SIL6V7ms5u3amQAV3YK7q72EZJXThgRefQNk7YgWCr+e4M9Q3Okfi1c5+rgbtdIdxZrOrNySA9yrVM2BQJjBMWW9X7+AiCjVn7wiPh39omjzn3EOnk/itYmaeN48+xGciDHqrVcX9nEga5bpukIyGR2QyN0= root@fhmiu8rolp7gfqq58cud
+    - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOUoWCjArsGVdy2LtLULp/Fcp2mwl15vtcE1guQzeIqT xp@LAPTOP-08A5M294
 runcmd: []      
