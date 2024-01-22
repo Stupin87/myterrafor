@@ -29,7 +29,8 @@ resource "yandex_compute_instance" "default" {
     nat       = true
   }
   metadata = {
-    ssh-keys = "keglia:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA2k906bS2mFyte5QDp4Z189haWOEpN2Wf+P33XogORo xp@LAPTOP-08A5M294"
+    ssh-keys = "b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACANpPdOm0tphcrXuUA6eGdfPYWljhKTdln/j9916IDkaAAAAJiT8Duxk/A7sQAAAAtzc2gtZWQyNTUxOQAAACANpPdOm0tphcrXuUA6eGdfPYWljhKTdln/j9916IDkaAAAAEABJewnwMZ5RvP+wuSblvtjvLYBLUo3dnjt2CbCVyIB9A2k906bS2mFyte5QDp4Z189
+haWOEpN2Wf+P33XogORoAAAAEnhwQExBUFRPUC0wOEE1TTI5NAECAw=="
   }
   scheduling_policy {
     preemptible = true 
@@ -37,7 +38,7 @@ resource "yandex_compute_instance" "default" {
 connection {
     type     = "ssh"
     user     = "keglia"
-    private_key = file("/root/.ssh/id_rsa")
+    private_key = file("/home/keglia/myterrafor/id_ed25519.pub")
     host = yandex_compute_instance.default.network_interface.0.nat_ip_address
   }
   provisioner "remote-exec" {
