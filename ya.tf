@@ -57,7 +57,7 @@ connection {
 data "yandex_compute_image" "ubuntu_image" {
   family = "ubuntu-2004-lts"
 }
-resource "yandex_compute_disk" "ubuntu_15GB"  {
+resource "yandex_compute_disk" "ubuntu2004_15GB"  {
   type     = "network-ssd"
   zone     = "ru-central1-a"
   image_id = data.yandex_compute_image.ubuntu_image.id
