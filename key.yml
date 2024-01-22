@@ -1,1 +1,7 @@
-
+users:
+  - name: keglia
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA2k906bS2mFyte5QDp4Z189haWOEpN2Wf+P33XogORo xp@LAPTOP-08A5M294
