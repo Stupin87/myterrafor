@@ -1,8 +1,13 @@
 #cloud-config
+datasource:
+ Ec2:
+  strict_id: false
+ssh_pwauth: no
 users:
   - name: keglia
     groups: sudo
     shell: /bin/bash
     sudo: 'ALL=(ALL) NOPASSWD:ALL'
     ssh-authorized-keys:
-      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA2k906bS2mFyte5QDp4Z189haWOEpN2Wf+P33XogORo xp@LAPTOP-08A5M294
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOUoWCjArsGVdy2LtLULp/Fcp2mwl15vtcE1guQzeIqT xp@LAPTOP-08A5M294
+runcmd: []      

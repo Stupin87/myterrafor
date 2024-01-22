@@ -25,7 +25,7 @@ resource "yandex_compute_instance" "default" {
     disk_id = yandex_compute_disk.ubuntu2004_15GB.id
   }
   network_interface {
-    subnet_id = "b0c9qst4f421skas5p13"
+    subnet_id = "e9b5gvivpqjj7upb4c9l"
     nat       = true
   }
   metadata = {
