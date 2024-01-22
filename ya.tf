@@ -29,10 +29,7 @@ resource "yandex_compute_instance" "default" {
     nat       = true
   }
   metadata = {
-    ssh-keys =  <<EOT
-b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACANpPdOm0tphcrXuUA6eGdfPYWljhKTdln/j9916IDkaAAAAJiT8Duxk/A7sQAAAAtzc2gtZWQyNTUxOQAAACANpPdOm0tphcrXuUA6eGdfPYWljhKTdln/j9916IDkaAAAAEABJewnwMZ5RvP+wuSblvtjvLYBLUo3dnjt2CbCVyIB9A2k906bS2mFyte5QDp4Z189
-haWOEpN2Wf+P33XogORoAAAAEnhwQExBUFRPUC0wOEE1TTI5NAECAw==
-EOT
+    user-data = "${file("./key.yml")}"
   }
   scheduling_policy {
     preemptible = true 
@@ -40,7 +37,7 @@ EOT
 connection {
     type     = "ssh"
     user     = "keglia"
-    private_key = file("/home/keglia/myterrafor/id_ed25519.pub")
+    private_key = file("/root/.ssh/id_rsa")
     host = yandex_compute_instance.default.network_interface.0.nat_ip_address
   }
   provisioner "remote-exec" {
