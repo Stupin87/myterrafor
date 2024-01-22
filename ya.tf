@@ -29,8 +29,10 @@ resource "yandex_compute_instance" "default" {
     nat       = true
   }
   metadata = {
-    ssh-keys = "b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACANpPdOm0tphcrXuUA6eGdfPYWljhKTdln/j9916IDkaAAAAJiT8Duxk/A7sQAAAAtzc2gtZWQyNTUxOQAAACANpPdOm0tphcrXuUA6eGdfPYWljhKTdln/j9916IDkaAAAAEABJewnwMZ5RvP+wuSblvtjvLYBLUo3dnjt2CbCVyIB9A2k906bS2mFyte5QDp4Z189
-haWOEpN2Wf+P33XogORoAAAAEnhwQExBUFRPUC0wOEE1TTI5NAECAw=="
+    ssh-keys =  <<EOT
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACANpPdOm0tphcrXuUA6eGdfPYWljhKTdln/j9916IDkaAAAAJiT8Duxk/A7sQAAAAtzc2gtZWQyNTUxOQAAACANpPdOm0tphcrXuUA6eGdfPYWljhKTdln/j9916IDkaAAAAEABJewnwMZ5RvP+wuSblvtjvLYBLUo3dnjt2CbCVyIB9A2k906bS2mFyte5QDp4Z189
+haWOEpN2Wf+P33XogORoAAAAEnhwQExBUFRPUC0wOEE1TTI5NAECAw==
+EOT
   }
   scheduling_policy {
     preemptible = true 
