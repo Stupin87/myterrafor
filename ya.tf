@@ -9,7 +9,7 @@ terraform {
 
 provider "yandex" {
   
-  token     = "keglia"
+  token     = "keglia_token_yandex"
   cloud_id  = "b1gto83v8fdqgm5tjb2c"
   folder_id = "b1g7eg0ncndrirrrbobi"
   zone = "ru-central1-a"
